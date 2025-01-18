@@ -46,7 +46,6 @@ credit_score = st.number_input("Credit Score", min_value=0, max_value=850, value
 existing_loans = st.number_input("Existing Loans", min_value=0, max_value=5, value=1)
 total_existing_loan_amount = st.number_input("Total Existing Loan Amount", min_value=0, max_value=100000, value=15000)
 outstanding_debt = st.number_input("Outstanding Debt", min_value=0, max_value=100000, value=9000)
-bank_account_history = st.number_input("Back Account History", min_value=0, max_value=10, value=2)
 loan_amount_requested = st.number_input("Loan Amount Requested", min_value=1000, max_value=1000000, value=20000)
 loan_term = st.number_input("Loan Term (in months)", min_value=12, max_value=240, value=12)
 interest_rate = st.number_input("Interest Rate (%)", min_value=1.0, max_value=15.0, value=10.0)
@@ -69,7 +68,7 @@ if st.button("Predict Loan Status"):
     # Prepare the data for prediction
     application_data = np.array([age, dependents, annual_income, monthly_expenses, credit_score,
                                  existing_loans, total_existing_loan_amount, outstanding_debt,
-                                 loan_amount_requested, loan_term, interest_rate, bank_account_history,
+                                 loan_amount_requested, loan_term, interest_rate, 
                                  marital_status_married, marital_status_single, employment_status_self_employed,
                                  employment_status_unemployed, city_town_suburban, city_town_urban]).reshape(1, -1)
 
