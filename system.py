@@ -39,7 +39,7 @@ st.write("Enter your details to predict your loan status.")
 
 # Input fields for user data
 age = st.number_input("Age", min_value=18, max_value=120, value=30)
-dependents = st.number_input("Dependents", min_value=0, max_value=10, value=1)
+dependents = st.number_input("Number of Dependents", min_value=0, max_value=10, value=1)
 annual_income = st.number_input("Annual Income", min_value=0, max_value=1000000, value=70000)
 monthly_expenses = st.number_input("Monthly Expenses", min_value=0, max_value=1000000, value=3500)
 credit_score = st.number_input("Credit Score", min_value=0, max_value=850, value=750)
